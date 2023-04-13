@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Catat Pengeluaran</string>
+    <string-array name="Kelas">
+        <item>Manajemen Informatika 1</item>
+        <item>Manajemen Informatika 2</item>
+        <item>Manajemen Informatika 3</item>
+    </string-array>
+</resources>
