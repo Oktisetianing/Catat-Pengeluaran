@@ -53,15 +53,17 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Panda"
+                        android:text="D3 MI"
                         android:textColor="@color/white"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp"
+                        android:id="@+id/tv_nama"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="200.000"
+                        android:text="1.000.000"
                         android:textColor="@color/white"
-                        android:textSize="16sp"/>
+                        android:textSize="16sp"
+                        android:id="@+id/tv_total"/>
 
                 </LinearLayout>
             </LinearLayout>
@@ -91,7 +93,8 @@
             android:layout_marginTop="8dp"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
-            android:textSize="16sp" />
+            android:textSize="16sp"
+            android:id="@+id/et_jumlah"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:layout_width="match_parent"
@@ -101,7 +104,8 @@
             android:background="@drawable/bg_container"
             android:textSize="16sp"
             android:textColor="@color/white"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:id="@+id/btn_submit"/>
 
     </LinearLayout>
 
