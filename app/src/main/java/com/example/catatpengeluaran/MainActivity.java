@@ -52,12 +52,19 @@ public class MainActivity extends AppCompatActivity {
                                     Toast.makeText(MainActivity.this, "Jumlah Pengeluaran harus diisi", Toast.LENGTH_SHORT).show();
                                 } else {
                                     //Opsi 1 : Passing data via Extras
-                                    Bundle bundle = new Bundle();
-                                    bundle.putString("keyNama",nama);
-                                    bundle.putString("keyJumlah",jumlah);
-                                    Intent intent = new Intent(MainActivity.this,DataActivity.class);
-                                    intent.putExtras(bundle);
-                                    startActivity(intent);
+                                    //Bundle bundle = new Bundle();
+                                    //bundle.putString("keyNama",nama);
+                                   // bundle.putString("keyJumlah",jumlah);
+                                    //Intent intent = new Intent(MainActivity.this,DataActivity.class);
+                                   // intent.putExtras(bundle);
+                                   // startActivity(intent);
+
+                                    //Opsi 2 :  Passing data via Data
+                                    Intent intent2 = new Intent(MainActivity.this, DataActivity.class);
+                                    intent2.putExtra("KeyNama", nama);
+                                    intent2.putExtra("KeyJumlah", jumlah);
+                                    startActivity(intent2);
+
                                 }
 
                             }
