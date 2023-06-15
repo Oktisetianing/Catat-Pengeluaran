@@ -42,9 +42,16 @@ public class KontakAdapter extends RecyclerView.Adapter<KontakAdapter.KontakView
 
     }
 
+    private void bindData(ContacModel contacModel) {
+    }
+
     @Override
     public int getItemCount() {
         return contaclist.size();
+    }
+
+    public void setItem (List<ContacModel> items){
+        contaclist = items;
     }
 
     public interface OnItemClickListerner {
