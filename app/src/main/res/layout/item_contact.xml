@@ -1,15 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvKontak"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:elevation="4dp"
+    app:cardCornerRadius="20dp"
+    app:cardUseCompatPadding="true">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/avataraku"/>
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/ivAvatar"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/baseline_contact_mail_24"
+            android:layout_margin="20dp"/>
+
+        <TextView
+            android:id="@+id/tvNama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Kontak"
+            android:layout_toRightOf="@id/ivAvatar"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:layout_marginTop="24dp"/>
+
+        <TextView
+            android:id="@+id/tvNohp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nomor Hp"
+            android:layout_toRightOf="@id/ivAvatar"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginTop="52dp"/>
+
+        <TextView
+            android:id="@+id/tvstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status"
+            android:gravity="end"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/gray"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp"/>
 
 
-
-
-</LinearLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
