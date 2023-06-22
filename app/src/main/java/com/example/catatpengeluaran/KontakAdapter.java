@@ -19,30 +19,25 @@ public class KontakAdapter extends RecyclerView.Adapter<KontakAdapter.KontakView
     private List<ContacModel> contaclist;
     private LayoutInflater layoutInflater;
     private Context context;
-    final KontakAdapter.OnItemClickListerner listener;
+    final OnItemClickListener listener;
 
-    public KontakAdapter(LayoutInflater mInflater, List<ContacModel> contaclist, LayoutInflater layoutInflater, Context context, KontakAdapter.OnItemClickListener listener) {
+    public KontakAdapter(List<ContacModel> contaclist, Context context, OnItemClickListener listener) {
         this.mInflater = mInflater;
         this.contaclist = contaclist;
-        this.layoutInflater = layoutInflater;
         this.context = context;
         this.listener = listener;
     }
 
     @NonNull
     @Override
-    public KontakAdapter onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public KontakAdapter.KontakViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = mInflater.inflate(R.layout.item_contact, null);
         return new KontakAdapter.KontakViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull KontakAdapter holder, int position) {
+    public void onBindViewHolder(@NonNull KontakAdapter.KontakViewHolder holder, int position) {
         holder.bindData(contaclist.get(position));
-
-    }
-
-    private void bindData(ContacModel contacModel) {
     }
 
     @Override
@@ -54,7 +49,10 @@ public class KontakAdapter extends RecyclerView.Adapter<KontakAdapter.KontakView
         contaclist = items;
     }
 
-    public interface OnItemClickListerner {
+
+
+    public interface OnItemClickListener {
+        void onItemClick(ContacModel item);
     }
 
     public class KontakViewHolder extends RecyclerView.ViewHolder {
@@ -70,7 +68,7 @@ public class KontakAdapter extends RecyclerView.Adapter<KontakAdapter.KontakView
         }
 
         public void bindData(final ContacModel Item){
-            ivAvatar.setColorFilter(Color.parseColor(Item.getColor(), PorterDuff.Mode.SRC_IN);
+            ivAvatar.setColorFilter(Color.parseColor(Item.getColor()), PorterDuff.Mode.SRC_IN;
             tvNama.setText(Item.getNama());
             tvNohp.setText(Item.getHp());
             tvStatus.setText(Item.getStatus());
@@ -83,4 +81,6 @@ public class KontakAdapter extends RecyclerView.Adapter<KontakAdapter.KontakView
 
         }
     }
+
+
 }

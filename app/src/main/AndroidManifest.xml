@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CatatPengeluaran">
         <activity
+            android:name=".DetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".KontakActivity"
             android:exported="true">
             <intent-filter>
